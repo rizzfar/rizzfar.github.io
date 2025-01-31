@@ -2,6 +2,10 @@ const inputElement = document.getElementById('input-word');
 const infoElement = document.getElementById('info');
 const resultWordElement = document.getElementById('result-word');
 const resultMeanElement = document.getElementById('result-mean');
+const loadingSpinner = document.getElementById("loading-spinner");
+
+
+loadingSpinner.style.display = 'none';
 
 const permute = string => {
   const results = [];
@@ -35,10 +39,19 @@ const permute = string => {
 }
 
 const loadDictionary = async _ => {
-  const response = await fetch('dictionary.json');
-  const json = await response.json();
-  return json.dictionary;
-}
+  try {
+    const response = await fetch('dictionary.json');
+    if (!response.ok) throw new Error("Gagal memuat kamus");
+    
+    const json = await response.json();
+    console.log("Dictionary Loaded:", json);
+    return json.dictionary;
+  } catch (error) {
+    console.error("Error loading dictionary:", error);
+    return [];
+  }
+};
+
 
 const findAnagram = async () => {
   const input = inputElement.value.toLowerCase().trim();
@@ -48,28 +61,35 @@ const findAnagram = async () => {
     return;
   }
 
-  const permutations = new Set(permute(input));
-  const dictionary = await loadDictionary();
+  loadingSpinner.style.display = 'flex';
 
-  const anagrams = dictionary.filter(e => permutations.has(e.word.trim()) && e.type === 1);
-  const words = new Set(anagrams.map(e => e.word.trim()));
+  await new Promise(resolve => setTimeout(resolve, 0));
 
-  if (words.size === 0) {
-    infoElement.innerHTML = '<span style="color: red;">Kata tidak ditemukan dalam kamus!</span>';
-    resultWordElement.innerHTML = '';
-    resultMeanElement.innerHTML = '';
-    resultMeanElement.style.display = "none";
-    return;
+  try {
+    const permutations = new Set(permute(input));
+    const dictionary = await loadDictionary();
+    if (dictionary.length === 0) throw new Error("Kamus kosong atau gagal dimuat");
+
+    const anagrams = dictionary.filter(e => permutations.has(e.word.trim()) && e.type === 1);
+    const words = new Set(anagrams.map(e => e.word.trim()));
+
+    if (words.size === 0) {
+      infoElement.innerHTML = '<span style="color: red;">Kata tidak ditemukan dalam kamus!</span>';
+      resultWordElement.innerHTML = '';
+      resultMeanElement.innerHTML = '';
+      resultMeanElement.style.display = "none";
+    } else {
+      resultMeanElement.style.display = "block"; 
+      infoElement.innerHTML = `Ditemukan <b>${words.size}</b> dari <b>${permutations.size}</b> permutasi kata di dalam kamus`;
+      displayResults(words, anagrams);
+    }
+  } catch (error) {
+    console.error(error);
+    infoElement.innerHTML = '<span style="color: red;">Terjadi kesalahan!</span>';
+  } finally {
+    loadingSpinner.style.display = 'none'; 
   }
-
-  resultMeanElement.style.display = "block"; 
-  
-  const pesan = `Ditemukan <b>${words.size}</b> dari <b>${permutations.size}</b> permutasi kata di dalam kamus`;
-  infoElement.innerHTML = pesan;
-  displayResults(words, anagrams);
 };
-
-
 
 const displayResults = (words, anagrams) => {
   resultWordElement.innerHTML = [...words].map(e => {
@@ -99,4 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".toggle-mode").textContent = "☀️ Light Mode";
   }
 });
+
+
 

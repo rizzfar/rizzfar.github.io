@@ -14,7 +14,6 @@
     --input-focus: #007bff;
 }
 
-/* Reset dan Font */
 * {
     margin: 0;
     padding: 0;
@@ -22,16 +21,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body */
 body {
     background: #f9fbfc;
     color: var(--text-color);
     text-align: center;
     padding: 20px;
     margin-bottom: 80px;
+    transition: 200ms;
 }
 
-/* Heading */
 h1 {
     font-size: 2rem;
     font-weight: 600;
@@ -127,7 +125,6 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Kartu Hasil */
 #result-mean {
     display: none;
     margin-top: 20px;
@@ -165,7 +162,32 @@ footer {
     backdrop-filter: blur(5px);
 }
 
-/* Responsif */
+#loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-left-color: #3498db;
+    animation: spin 1s linear infinite;
+  }
+  
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
 @media screen and (max-width: 860px) {
     #result-word {
         grid-template-columns: 1fr 1fr;
