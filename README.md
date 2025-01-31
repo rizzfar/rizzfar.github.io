@@ -1,25 +1,23 @@
 # **🔍 Proyek Anagram Finder**  
 ### **Mata Kuliah: Analisis dan Strategi Algoritma**  
-### **Program Studi: [Nama Program Studi]**  
-### **Universitas: [Nama Universitas]**  
-### **Tahun Ajaran: [Tahun]**  
+### **Program Studi: Teknik Informatika**  
+### **Universitas: Universitas Komputer Indonesia**  
+### **Tahun Ajaran: 2025**  
 
 ---
 
 ## **📌 Deskripsi Proyek**  
 Proyek **Anagram Finder** ini dikembangkan sebagai bagian dari tugas akhir mata kuliah **Analisis dan Strategi Algoritma**. Sistem ini menggunakan pendekatan **Brute Force** untuk mencari anagram dari kata yang dimasukkan oleh pengguna dengan membandingkan hasil permutasi dengan dataset kamus yang telah disediakan.  
 
-Proyek ini bertujuan untuk mengimplementasikan konsep algoritma Brute Force dalam pencarian string serta mengevaluasi efisiensi metode yang digunakan dalam proses pencarian anagram.
-
 ---
 
 ## **👥 Anggota Kelompok**  
 | No | Nama | NIM |  
 |----|---------------------|------------|  
-| 1  | [Nama Anggota 1]   | [NIM 1]    |  
-| 2  | [Nama Anggota 2]   | [NIM 2]    |  
-| 3  | [Nama Anggota 3]   | [NIM 3]    |  
-| 4  | [Nama Anggota 4]   | [NIM 4]    |  
+| 1  | Rizky Al Farid Hafizh   | 10123028    |  
+| 2  | Muhamad Irsad Assopi   | 10123038    |  
+| 3  | Hizkia Imanuel Edho   | 10123022    |  
+| 4  | Yoan Ready Syavera Anggota 4   | 10123002    |  
 
 ---
 
