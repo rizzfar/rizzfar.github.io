@@ -4,7 +4,6 @@ const resultWordElement = document.getElementById('result-word');
 const resultMeanElement = document.getElementById('result-mean');
 const loadingSpinner = document.getElementById("loading-spinner");
 
-
 loadingSpinner.style.display = 'none';
 
 const permute = string => {
@@ -99,7 +98,7 @@ const displayResults = (words, anagrams) => {
   const parser = new DOMParser();
   resultMeanElement.innerHTML = anagrams.map(e => {
     const parsedHTML = parser.parseFromString(e.arti, 'text/html').body.textContent;
-    return `<div id="${e.word}" style="margin-bottom: 1em"><h3 style="margin: 0; color: red">${e.word}</h3><span>${parsedHTML}</span></div>`;
+    return `<div id="${e.word.trim()}" style="margin-bottom: 1em"><h3 style="margin: 0; color: red">${e.word}</h3><span>${parsedHTML}</span></div>`;
   }).join('');
 };
 
