@@ -15,7 +15,7 @@
 
 .loader {
   --duration: 3s;
-  --primary: rgb(0, 90, 53);
+  --primary: rgb(10, 126, 152);
   --primary-light: #001b18;
   --primary-rgba: rgba(96, 125, 211, 0);
   width: 200px;
@@ -875,4 +875,3 @@
     opacity: 1;
   }
 }
-

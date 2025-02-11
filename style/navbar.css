@@ -1,0 +1,151 @@
+.header {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid #ddd;
+  z-index: 10000;
+  padding: 10px 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nav__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav__navigation ul {
+  display: flex;
+}
+
+.nav__navigation ul li {
+  margin: 0 15px;
+  list-style: none;
+}
+
+.nav__navigation ul li a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav__navigation ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav__navigation ul li a:hover {
+  color: grey;
+}
+
+.nav__navigation ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+.menu-icon {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-checkbox {
+  display: none;
+}
+
+.close-icon {
+  display: none;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #333;
+}
+
+@media (max-width: 760px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav__navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    transition: right 0.3s ease-in-out;
+    padding-top: 70px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__navigation ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav__navigation ul li {
+    margin: 20px 0;
+  }
+
+  .menu-checkbox:checked ~ .nav__navigation {
+    right: 0;
+  }
+
+  .menu-checkbox:checked ~ .nav__navigation .close-icon {
+    display: block;
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.button-group button {
+  padding: 10px 16px;
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-group button:nth-child(1),
+.button-group button:nth-child(2) {
+  background: transparent;
+  border: 2px solid #333;
+  color: #333;
+}
+
+.button-group button:nth-child(1):hover,
+.button-group button:nth-child(2):hover {
+  background: #333;
+  color: white;
+}

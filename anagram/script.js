@@ -7,6 +7,7 @@ const scrollToTopButton = document.getElementById('scroll-to-top');
 
 loadingSpinner.style.display = 'none';
 
+// PERMUTASI
 const permute = (string) => {
   const results = [string];
   const chars = string.split('');
@@ -37,7 +38,7 @@ const loadDictionary = async () => {
     const json = await response.json();
     return json.dictionary;
   } catch (error) {
-    console.error('Error loading dictionary:', error);
+    console.error('Error memuat kamus:', error);
     return [];
   }
 };
@@ -56,7 +57,7 @@ const findAnagram = async () => {
   const input = inputElement.value.toLowerCase().trim();
   inputElement.value = '';
 
-  if (!input) {
+  if (!input) { 
     infoElement.innerHTML = '<span style="color: red;">Masukkan kata terlebih dahulu!</span>';
     return;
   }
@@ -89,6 +90,7 @@ const findAnagram = async () => {
   }
 };
 
+// JAVASCRIPT UI
 const toggleMode = () => {
   const body = document.body;
   body.classList.toggle('dark-mode');

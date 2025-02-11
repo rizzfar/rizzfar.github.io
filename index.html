@@ -3,14 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RizkyAlFaridPortfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -18,9 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="icon" href="img/logo.jpg" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
     <div class="loading-wrapper" id="loader">
@@ -54,121 +47,181 @@
         </div>
       </div>
     </div>
-
     <div class="app-container" id="app-container">
-      <button id="dark-mode-toggle" class="dark-mode-toggle">
-        <i id="dark-mode-icon" class="fa-solid fa-sun dark-icon"></i>
-      </button>
+        <header class="header">
+            <nav class="nav">
+              <div class="nav__title">
+                <h1>rizzfar.</h1>
+              </div>
+              
+              <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+              
+              <label for="menu-toggle" class="menu-icon" id="menu-open">&#9776;</label>
+          
+              <div class="nav__navigation">
+                <label for="menu-toggle" class="close-icon" id="menu-close">&times;</label>
+          
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">services</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#" id="project">Projects</a></li>
+                </ul>
+              </div>
+          
+              <div class="button-group">
+                <button id="dark-mode-btn" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                  <i id="dark-mode-icon" class="fa-solid fa-sun"></i>
+                </button>
+                <button aria-label="Contact Me">Contact Me</button>
+              </div>
+            </nav>
+          </header>
+          
 
-      <header class="profile" id="profile">
-        <div class="profile__profile-image" id="image-profile">
-          <img
-            src="img/rizuki.jpg"
-            alt="Rizky Al Farid Hafizh"
-            class="image-profile"
-          />
-        </div>
-        <div class="profile__profile-bio">
-          <h1 class="name">
-            Hello, I am Rizky Al Farid Hafizh. A
-            <span>Frontend Developer</span> and <span>UI/UX Designer</span>.
+      <main class="hero">
+        <div class="hero-content">
+          <h1>
+            I'm Rizky Al Farid,
+            <img
+              src="img/rizuki.jpg"
+              alt="Rizky's Profile"
+              id="image-profile"
+            />
           </h1>
-          <p class="description">
-            My passion for programming started in school and university, and
-            I’ve continued coding ever since. In my free time, I love playing
-            football and listening to music.
-          </p>
-          <a href="#footer">Contact Me</a>
+          <h2>a <span id="typing-text"></span></h2>
+          <h2>based in <b>Bandung</b></h2>
+          <div class="buttons">
+            <a href="#" class="btn primary">
+              <i class="far fa-envelope"></i> BOOK A FREE CALL
+            </a>
+            <a href="#" class="btn secondary">
+              VIEW WORK <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-      </header>
-
-      <main class="about-me" id="about">
-        <article class="about">
-          <h1>About Me</h1>
-          <article>
-            I am a Computer Science student at Universitas Komputer Indonesia
-            (UNIKOM) Bandung with a strong interest in the world of programming.
-            This interest stems from my curiosity and enthusiasm for finding
-            solutions through code, while also creating creative and innovative
-            ideas that can benefit many people.
-          </article>
-          <article>
-            Amid my busy college schedule, I make time to learn coding through
-            platforms like Dicoding Indonesia, Skillvul, and Hackkerank. I also
-            join coding scholarship programs to enhance my skills and gain more
-            experience in programming, aligning with the standards of startup
-            companies.
-          </article>
-          <article>
-            I’m also part of a programmer community in Bandung called the
-            Bandung Coders Community. Being part of this group helps me expand
-            my knowledge and build new connections. Occasionally, I also take on
-            the role of a mentor, sharing what I’ve learned with others.
-          </article>
-          <a href="#">More About Me</a>
-        </article>
-
-        <aside class="experience">
-          <div class="experience-item">
-            <h1>Past experience</h1>
-            <div class="experience-card-item-container">
-              <div class="experience-card-item">
-                <div class="name-experience">Web Developer</div>
-                <div class="company-experience">
-                  Google Developer Student ITB.
-                </div>
-                <div class="range-experience">2023 - 2024</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="experience-card-item-container">
-              <div class="experience-card-item">
-                <div class="name-experience">Frontend Web Developer</div>
-                <div class="company-experience">Bandung Coders Community.</div>
-                <div class="range-experience">2022- Until Now</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="experience-card-item-container">
-              <div class="experience-card-item">
-                <div class="name-experience">Computer Technician</div>
-                <div class="company-experience">CV Mekar Utama.</div>
-                <div class="range-experience">2022 - 2022</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="icon-container">
-            <a
-              href="https://www.linkedin.com/in/rizkyalfaridhafizh/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/rizzfar"
-              target="_blank"
-              aria-label="GitHub"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              aria-label="Instagram"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </div>
-        </aside>
       </main>
+    </div>
 
-      <section class="portfolio" id="portfolio">
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <button class="about-button">⚡ ABOUT ME</button>
+            <h1 data-aos="fade-up">
+                I’m a <span class="italic">frontend developer </span> and 
+                <span class="italic">creative web developer</span> 
+                <span class="bold">with</span> a passion for solving problems
+                <br>
+                through simple & interactive designs.
+            </h1>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rizkyalfaridhafizh" class="social-item" target="_blank" data-aos="fade-up">
+                    <i class="fab fa-linkedin"></i> LINKEDIN <span>↗</span>
+                </a>
+                <a href="https://www.instagram.com/rizky31afh_" class="social-item" target="_blank" data-aos="fade-up">
+                    <i class="fab fa-instagram"></i> INSTAGRAM <span>↗</span>
+                </a>
+                <a href="https://github.com/rizzfar" class="social-item" target="_blank" data-aos="fade-up">
+                    <i class="fab fa-github"></i> GITHUB <span>↗</span>
+                </a>
+                <a href="https://www.hackerrank.com/profile/alfaridrizky69" class="social-item" target="_blank" data-aos="fade-up">
+                    <i class="fab fa-hackerrank"></i> HACKERRANK <span>↗</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="features-title">
+            Spotlight <span class="bold">a</span> <span class="italic">features</span> <br> 
+            of your <span class="italic">service.</span>
+        </h2>
+        <div class="features-container">
+            <div class="feature-card" data-aos="fade-up">
+                <h3>Web Development</h3>
+                <p>We build modern and responsive websites using the latest technologies to ensure the best user experience.</p>
+                <div class="feature-image">
+                    <img src="https://eduwork.id/storage/user/blogs/38/annunciolavorodeveloper5581621764469-min(38).jpg" alt="Web Development">
+                    <span class="feature-icon">✱</span>
+                </div>
+            </div>
+            <div class="feature-card" data-aos="fade-up">
+                <h3>Web Maintenance</h3>
+                <p>Keep your website secure and running smoothly with our regular maintenance and system updates.</p>
+                <div class="feature-image">
+                    <img src="https://wesclic.com/wp-content/uploads/2023/01/code-820275_1920-1024x683-1.jpg" alt="Web Maintenance">
+                    <span class="feature-icon">✱</span>
+                </div>
+            </div>
+            <div class="feature-card" data-aos="fade-up">
+                <h3>UI/UX Design</h3>
+                <p>Create stunning user interfaces and intuitive user experiences to enhance engagement and usability.</p>
+                <div class="feature-image">
+                    <img src="https://buildwithangga.com/storage/assets/thumbnail_tips/Perkenalan-UI-UX-Designer_-Tugas-Utama-dan-Contoh-Projek-buildwithangga.png" alt="UI/UX Design">
+                    <span class="feature-icon">✱</span>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="skills-title">My <span class="highlight">Skills</span></h2>
+        <div class="skills-container">
+            <div class="skill-card" data-aos="fade-up">
+                <img src="https://cdn-icons-png.flaticon.com/128/732/732212.png" alt="HTML Icon">
+                <h3>HTML</h3>
+                <p>Expert at crafting semantic, SEO-friendly, and efficient web structures.</p>
+                <span class="badge">Advanced</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up">
+                <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="CSS Icon">
+                <h3>CSS</h3>
+                <p>Master in responsive design, animations, and modern UI styling.</p>
+                <span class="badge">Advanced</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="JavaScript Icon">
+                <h3>JavaScript</h3>
+                <p>Strong foundation in ES6+, asynchronous programming, and DOM manipulation.</p>
+                <span class="badge">Intermediate</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up">
+                <img src="https://cdn-icons-png.flaticon.com/128/1126/1126012.png" alt="React Icon">
+                <h3>React</h3>
+                <p>Experienced in hooks, state management, and component-based architecture.</p>
+                <span class="badge">Intermediate</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up">
+                <img src="https://cdn-icons-png.flaticon.com/128/2965/2965278.png" alt="UI/UX Icon">
+                <h3>UI/UX</h3>
+                <p>Passionate about designing intuitive, user-friendly, and accessible interfaces.</p>
+                <span class="badge">Proficient</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968672.png
+                " alt="Bootstrap Icon">
+                <h3>Bootstrap</h3>
+                <p>Skilled in building responsive, mobile-first websites with Bootstrap framework.</p>
+                <span class="badge">Proficient</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up">
+                <img src="https://cdn-icons-png.flaticon.com/128/919/919825.png" alt="Webpack Icon">
+                <h3>Webpack</h3>
+                <p>Experience in optimizing and bundling JavaScript applications with Webpack.</p>
+                <span class="badge">Intermediate</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up">
+                <img src="https://cdn-icons-png.flaticon.com/128/732/732276.png" alt="Tailwind Icon">
+                <h3>Tailwind CSS</h3>
+                <p>Expertise in utility-first CSS framework for fast and efficient styling.</p>
+                <span class="badge">Advanced</span>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="portfolio" id="portfolio">
         <div class="portfolio-header">
           <h1>Portfolio</h1>
           <div class="portfolio-description">
@@ -181,7 +234,7 @@
         </div>
 
         <div class="portfolio-item-container">
-          <div class="portfolio-item" data-aos="fade-up">
+          <div class="portfolio-item" data-aos="fade-up" >
             <div class="project-details">
               <div class="project-logo">
                 <img
@@ -259,116 +312,11 @@
           </div>
         </div>
       </section>
-      
-      <div class="certification">
-        <h1>Certification</h1>
-        <p>The Certifications That Build My Career</p>
-        <div class="carousel">
-          <div class="slides">
-            <div class="slide">
-              <img src="img/expert.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img src="img/pemweb.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img src="img/python.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img src="img/ccna.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img src="img/gold.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img src="img/figma.jpg" alt="">
-            </div>
-          </div>
-          <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-          <div class="indicators">
-            <span class="dot" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-            <span class="dot" data-index="3"></span>
-            <span class="dot" data-index="4"></span>
-            <span class="dot" data-index="5"></span>
-          </div>
-          <div class="page-number">
-            <span id="current-page">1</span> / <span id="total-pages">4</span>
-          </div>
-        </div>
-      </div>
-      
-
-      <footer class="footer" id="footer">
-        <div class="footer-container">
-          <div class="footer-logo">
-            <img src="img/logo.jpg" alt="Logo" />
-            <p>
-              Creating impactful solutions for the digital era. Let's grow
-              together.
-            </p>
-          </div>
-
-          <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-contact">
-            <h4>Contact Us</h4>
-            <ul>
-              <li>
-                Email:
-                <a href="mailto:alfaridrizky69@gmail.com"
-                  >alfaridrizky69@gmail.com</a
-                >
-              </li>
-              <li>Phone: <a href="tel:+123456789">+62 878 8466 7371</a></li>
-              <li>
-                Address: Jln. Perintis Kemederkaan, Kab. Cianjur, Kec. Cianjur
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-social">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-              <a
-                href="https://www.facebook.com/rizky.alfarid.1/"
-                target="_blank"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="https://x.com/faridddrizky31" target="_blank"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="https://www.instagram.com/rizky31afh_/" target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/rizkyalfaridhafizh"
-                target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>
-            &copy; 2025 Rizky Al Farid Hafizh. All rights reserved. Thank you
-            for visiting ❤️
-          </p>
-        </div>
-      </footer>
-    </div>
-
-    <script src="script.js" type="module"></script>
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
   </body>
 </html>

@@ -1,5 +1,8 @@
 .portfolio {
-  padding: 16px;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+  font-family: "Poppins";
 }
 
 .portfolio-header {
@@ -8,7 +11,7 @@
 }
 
 .portfolio-header h1 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -137,6 +140,11 @@
 }
 
 @media (min-width: 768px) {
+  .portfolio {
+    width: 70%;
+    margin: auto;
+    padding: 80px 0;
+  }
   .portfolio-item {
     flex-direction: row;
     align-items: flex-start;
@@ -167,4 +175,5 @@
     display: flex;
     flex-direction: column;
   }
+
 }

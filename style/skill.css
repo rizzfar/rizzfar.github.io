@@ -1,0 +1,117 @@
+.skills {
+  text-align: center;
+  padding: 50px 20px;
+  background: #181818;
+  color: white;
+  margin-top: 100px;
+}
+
+.skills-title {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+/* Grid Layout untuk layar besar */
+.skills-container {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Card Styling */
+.skill-card {
+  background: #2A2A2A;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  border: 1px solid rgb(192, 192, 192);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+}
+
+.skill-card:hover img {
+  transform: scale(1.1);
+}
+
+.skill-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 0.9em;
+  color: #a0a0a0;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Badge */
+.badge {
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  border-radius: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-container {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-title {
+    font-size: 2.5em;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-title {
+    font-size: 2em;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+}

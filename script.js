@@ -1,75 +1,63 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const loader = document.getElementById('loader');
-  const appContainer = document.getElementById('app-container');
-  const imageProfile = document.getElementById('image-profile');
-  const toggleButton = document.getElementById('dark-mode-toggle');
-  const darkModeIcon = document.getElementById('dark-mode-icon');
-  const slides = document.querySelector('.slides');
-  const dots = document.querySelectorAll('.dot');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  const currentPage = document.getElementById('current-page');
-  const totalPages = document.getElementById('total-pages');
-
-  let currentIndex = 0;
-  const totalSlides = dots.length;
+const loader = document.getElementById('loader');
+const appContainer = document.getElementById('app-container');
+const darkModeBtn = document.getElementById('dark-mode-btn');
 
 
-  const body = document.body;
 
-  AOS.init();
+setTimeout(() => {
+  loader.style.display = 'none';
+  appContainer.style.display = 'block';
+}, 3000)
 
-  document.body.style.overflowY = 'hidden';
-  imageProfile.style.display = 'none';
-  toggleButton.style.display = 'none';
+document.addEventListener("DOMContentLoaded", () => {
+  const darkModeBtn = document.getElementById("dark-mode-btn");
+  const darkModeIcon = document.getElementById("dark-mode-icon");
 
-  setTimeout(() => {
-    loader.style.display = 'none';
-    appContainer.style.display = 'block';
-    document.body.style.overflowY = 'auto';
-    imageProfile.style.display = 'block';
-    toggleButton.style.display = 'block';
-  }, 3000);
+  darkModeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
 
-  toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-
-    if (body.classList.contains('dark-mode')) {
-      darkModeIcon.classList.remove('fa-sun');
-      darkModeIcon.classList.add('fa-moon');
-    } else {
-      darkModeIcon.classList.remove('fa-moon');
-      darkModeIcon.classList.add('fa-sun');
-    }
+      if (darkModeIcon.classList.contains("fa-sun")) {
+          darkModeIcon.classList.replace("fa-sun", "fa-moon");
+      } else {
+          darkModeIcon.classList.replace("fa-moon", "fa-sun");
+      }
   });
+});
 
-  totalPages.textContent = totalSlides;
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuClose = document.getElementById("menu-close");
 
-  function updateCarousel() {
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    dots.forEach((dot, index) => {
-      dot.classList.toggle('active', index === currentIndex);
-    });
-    currentPage.textContent = currentIndex + 1;
+  menuClose.addEventListener("click", function () {
+    menuToggle.checked = true;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("typing-text");
+  const words = ["Software Engineer", "Frontend Dev", "UI/UX Designer"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    let currentWord = words[wordIndex];
+    let currentText = currentWord.substring(0, charIndex);
+    textElement.innerHTML = currentText + '<span class="typing"></span>';
+
+    if (!isDeleting && charIndex < currentWord.length) {
+      charIndex++;
+      setTimeout(typeEffect, 100);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(typeEffect, 50);
+    } else {
+      isDeleting = !isDeleting;
+      wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+      setTimeout(typeEffect, 1000);
+    }
   }
 
-  dots.forEach((dot) => {
-    dot.addEventListener('click', (e) => {
-      currentIndex = parseInt(e.target.dataset.index);
-      updateCarousel();
-    });
-  });
+  typeEffect();
+});
 
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-  });
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel();
-  });
-
-  updateCarousel();
-
-})
