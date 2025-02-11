@@ -46,7 +46,6 @@ body {
   }
 }
 
-
 .hero {
   text-align: left;
   display: flex;
@@ -131,7 +130,7 @@ body {
 @media (max-width: 760px) {
   .hero {
     width: 100%;
-    height: 55vh;
+    height: 70vh;
     text-align: center;  
     line-height: 4.5em;
     padding: 0 20px;
