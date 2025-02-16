@@ -8,6 +8,7 @@
 @import './feature.css';
 @import './project.css';
 @import './skill.css';
+@import './marquee.css';
 
 @font-face {
   font-family: 'Cal Sans';
@@ -22,6 +23,7 @@
   list-style: none;
   text-decoration: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -32,36 +34,37 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.typing::after {
-  content: "|";
-  display: inline-block;
-  animation: blink 0.7s infinite;
-  position: relative;
-  z-index: -111;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
+/* Hero Section */
 .hero {
-  text-align: left;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 1000px;
-  height: 75vh;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  height: 80vh;
   margin: auto;
+  padding: 0 20px;
   font-size: 14px;
-  font-family: 'Cal Sans', sans-serif;
-  line-height: 6em;  
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hero.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.hero-content {
+  flex: 1;
 }
 
 .hero h1 {
   font-size: 5em;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .hero h1 img {
@@ -71,11 +74,11 @@ body {
   margin-left: 5px;
   filter: grayscale(1);
   position: relative;
-  z-index: -11;
+  z-index: -1;
 }
 
 .hero h2 {
-  font-size: 5em;
+  font-size: 3.5em;
   font-weight: 300;
 }
 
@@ -93,16 +96,17 @@ body {
 
 .buttons {
   margin-top: 20px;
+  display: flex;
+  gap: 15px;
 }
 
 .btn {
-  padding: 13px 15px;
-  font-size: 14px;
+  padding: 12px 18px;
+  font-size: 16px;
   text-decoration: none;
-  border-radius: 5px;
-  transition: all 0.3s;
+  border-radius: 8px;
+  transition: all 0.3s ease;
   font-family: 'Space Grotesk', sans-serif;
-  margin-right: 20px;
 }
 
 .btn.primary {
@@ -127,40 +131,90 @@ body {
   color: white;
 }
 
-@media (max-width: 760px) {
+/* Hero Image */
+.hero .image-content {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top-color: rgb(0, 123, 255);
+  border-right-color: rgb(164, 11, 11);
+  border-bottom-color: rgb(9, 255, 0);
+  border-left-color: rgb(255, 230, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
   .hero {
-    width: 100%;
-    height: 70vh;
-    text-align: center;  
-    line-height: 4.5em;
-    padding: 0 20px;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 50px 20px;
+    gap: 20px;
   }
 
   .hero h1 {
-    font-size: 2.6em;
+    font-size: 3em;
   }
 
   .hero h2 {
-    font-size: 2.6em;
+    font-size: 2.5em;
   }
 
   .buttons {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .btn {
-    width: 55%;
-    height: 50px;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .hero .image-content {
+    width: 250px;
+    height: 250px;
   }
 }
 
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .btn {
+    width: 90%;
+    margin: auto;
+  }
+
+  .hero h1 img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero .image-content {
+    width: 200px;
+    height: 200px;
+  }
+}

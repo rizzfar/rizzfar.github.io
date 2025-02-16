@@ -1,8 +1,60 @@
 const loader = document.getElementById('loader');
 const appContainer = document.getElementById('app-container');
 const darkModeBtn = document.getElementById('dark-mode-btn');
+const slides = document.querySelector(".slides");
+const slideElements = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const currentPage = document.getElementById("current-page");
+const totalPages = document.getElementById("total-pages");
 
+let index = 0;
+  const totalSlides = slideElements.length;
+  totalPages.textContent = totalSlides;
 
+  function updateCarousel() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    currentPage.textContent = index + 1;
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+  }
+
+  prevBtn.addEventListener("click", function () {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener("click", function () {
+    index = (index + 1) % totalSlides;
+    updateCarousel();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", function () {
+      index = i;
+      updateCarousel();
+    });
+  });
+
+  // Auto-play carousel
+  let autoPlay = setInterval(() => {
+    index = (index + 1) % totalSlides;
+    updateCarousel();
+  }, 3000);
+
+  // Pause auto-play on hover
+  document.querySelector(".carousel").addEventListener("mouseenter", () => {
+    clearInterval(autoPlay);
+  });
+
+  document.querySelector(".carousel").addEventListener("mouseleave", () => {
+    autoPlay = setInterval(() => {
+      index = (index + 1) % totalSlides;
+      updateCarousel();
+    }, 3000);
+  });
+
+  updateCarousel(); // Set initial state
 
 setTimeout(() => {
   loader.style.display = 'none';
@@ -61,3 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
   typeEffect();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const heroSection = document.querySelector(".hero");
+
+  function showHero() {
+    heroSection.classList.add("show");
+  }
+
+  setTimeout(showHero, 3000); 
+});

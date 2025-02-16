@@ -90,7 +90,7 @@ const findAnagram = async () => {
   }
 };
 
-// JAVASCRIPT UI
+// KODE JAVASCRIPT ANTARMUKA
 const toggleMode = () => {
   const body = document.body;
   body.classList.toggle('dark-mode');

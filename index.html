@@ -64,9 +64,9 @@
                 <ul>
                   <li><a href="#">Home</a></li>
                   <li><a href="#about">About</a></li>
-                  <li><a href="#services">services</a></li>
+                  <li><a href="#services">Services</a></li>
                   <li><a href="#skills">Skills</a></li>
-                  <li><a href="#" id="project">Projects</a></li>
+                  <li><a href="#projects" id="project">Projects</a></li>
                 </ul>
               </div>
           
@@ -85,7 +85,7 @@
           <h1>
             I'm Rizky Al Farid,
             <img
-              src="img/rizuki.jpg"
+              src="img/logo.jpg"
               alt="Rizky's Profile"
               id="image-profile"
             />
@@ -101,7 +101,20 @@
             </a>
           </div>
         </div>
+        <div class="image-content" data-aos="fade-left">
+          <img src="img/rizuki.jpg" alt="">
+        </div>
       </main>
+      <marquee behavior="scroll" direction="left" scrollamount="20" class="marquee">
+        <div class="marquee-content">
+          <img src="https://dicoding-assets.sgp1.cdn.digitaloceanspaces.com/blog/wp-content/uploads/2014/12/dicoding-header-logo.png" alt="Logo 1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXK5g7trNu9TmrGh5X9wSTPSbYUQEBmzPPaQ&s" alt="Logo 2">
+          <img src="https://forum.skilvul.com/uploads/default/original/1X/cb1b0c38e86a0c1e64f942d26de9525f09204103.png" alt="Logo 3">
+          <img src="https://digitalservice.jabarprov.go.id/wp-content/uploads/2019/11/logo_jds.png" alt="Logo 4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/2560px-Udemy_logo.svg.png" alt="Logo 5">
+          <img src="https://avatars.githubusercontent.com/u/73729049?s=200&v=4" alt="Logo 5">
+        </div>
+      </marquee>      
     </div>
 
     <section class="about-section" id="about">
@@ -128,6 +141,42 @@
                 <a href="https://www.hackerrank.com/profile/alfaridrizky69" class="social-item" target="_blank" data-aos="fade-up">
                     <i class="fab fa-hackerrank"></i> HACKERRANK <span>↗</span>
                 </a>
+            </div>
+
+            <div class="certification">
+              <h1>Certification</h1>
+              <p>The Certifications That Build My Career</p>
+              <div class="carousel">
+                <div class="slides">
+                  <div class="slide">
+                    <img src="img/react.jpg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="img/expert.jpg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="img/pemweb.jpg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="img/gold.jpg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="img/figma.jpg" alt="">
+                  </div>
+                </div>
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                <div class="indicators">
+                  <span class="dot" data-index="0"></span>
+                  <span class="dot" data-index="1"></span>
+                  <span class="dot" data-index="2"></span>
+                  <span class="dot" data-index="3"></span>
+                  <span class="dot" data-index="4"></span>
+                </div>
+                <div class="page-number">
+                  <span id="current-page">1</span> / <span id="total-pages">4</span>
+                </div>
+              </div>
             </div>
         </div>
     </section>
@@ -233,7 +282,7 @@
           </div>
         </div>
 
-        <div class="portfolio-item-container">
+        <div class="portfolio-item-container" id="projects">
           <div class="portfolio-item" data-aos="fade-up" >
             <div class="project-details">
               <div class="project-logo">

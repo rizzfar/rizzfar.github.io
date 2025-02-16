@@ -1,0 +1,22 @@
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 15px 0;
+  width: 100%;
+  background-color: white;
+}
+
+.marquee-content {
+  width: 100%;
+  display: flex;
+  column-gap: 200px;
+  justify-content: space-between;
+}
+
+.marquee-content img {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+  border-radius: 50%;
+}
