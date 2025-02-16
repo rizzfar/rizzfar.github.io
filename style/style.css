@@ -154,6 +154,10 @@ body {
   filter: grayscale(1);
 }
 
+#typing-text::after{
+  content: '|';
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .hero {
