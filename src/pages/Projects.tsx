@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Anagram Search",
     description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL",
-    image: "./anagram.png",
+    image: "./public/anagram.png",
     technologies: ["Webpack", "SASS", "WebComponents"],
     github: "https://github.com/rizzfar/anagram",
     live: "rizzfar.github.io/anagram/"
