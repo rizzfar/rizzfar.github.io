@@ -13,7 +13,7 @@ const Home: React.FC = () => {
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 border sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
+        className="max-w-7xl h-screen mx-auto px-4 sm:px-6 lg:px-8 py-20"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
