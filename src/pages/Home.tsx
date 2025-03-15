@@ -13,7 +13,7 @@ const Home: React.FC = () => {
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 border sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-32 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-5xl sm:text-7xl font-bold text-gray-900 mb-6"
             >
-              Hi, I'm{' '}
+              Hi, Saya{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Rizky Al Farid
               </span>
@@ -50,8 +50,10 @@ const Home: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto"
             >
-              A passionate full-stack developer crafting beautiful and functional web
-              experiences with modern technologies
+              <p className="text-gray-600">
+                Seorang Frontend developer yang bersemangat dalam menciptakan pengalaman web yang indah dan fungsional dengan teknologi modern.
+              </p>
+
             </motion.p>
 
             <motion.div
@@ -83,7 +85,7 @@ const Home: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="max-w-7xl h-screen mx-auto px-4 sm:px-6 lg:px-8 py-20"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
@@ -95,8 +97,8 @@ const Home: React.FC = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4">Frontend Development</h3>
             <p className="text-gray-600">
-              Creating responsive and intuitive user interfaces with modern frameworks
-              and best practices
+              Membangun antarmuka pengguna yang responsif dan intuitif dengan framework modern serta praktik terbaik.
+
             </p>
           </motion.div>
 
@@ -109,8 +111,10 @@ const Home: React.FC = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4">Backend Development</h3>
             <p className="text-gray-600">
-              Building scalable and secure server-side applications with robust
-              architecture
+              <p className="text-gray-600">
+                Membangun aplikasi server-side yang skalabel dan aman dengan arsitektur yang kokoh.
+              </p>
+
             </p>
           </motion.div>
 
@@ -123,8 +127,10 @@ const Home: React.FC = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4">UI/UX Design</h3>
             <p className="text-gray-600">
-              Creating intuitive, user-friendly, and aesthetically pleasing designs that enhance user experience and accessibility.
+              Mendesain antarmuka yang intuitif, menarik, dan mudah digunakan dengan
+              mengikuti prinsip desain yang baik serta standar industri.
             </p>
+
           </motion.div>
         </div>
       </motion.div>

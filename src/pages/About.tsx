@@ -1,10 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Book, Briefcase, GraduationCap } from "lucide-react";
 
 const About: React.FC = () => {
+  const timeline = [
+    {
+      year: "2023",
+      title: "Frontend Web Developer",
+      company: "Bandung Coders Community",
+      icon: <Briefcase className="text-purple-500" size={24} />,
+    },
+    {
+      year: "2023-2027",
+      title: "Computer Science Degree",
+      company: "Universitas Komputer Indonesia (UNIKOM)",
+      icon: <GraduationCap className="text-green-500" size={24} />,
+    },
+    {
+      year: "2020",
+      title: "First Line of Code",
+      company: "Self-taught Journey",
+      icon: <Book className="text-red-500" size={24} />,
+    },
+  ];
+
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -13,7 +35,7 @@ const About: React.FC = () => {
             className="relative"
           >
             <motion.div
-              className="absolute -top-4 -left-4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"
+              className="absolute -top-4 -left-4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
               animate={{
                 scale: [1, 1.1, 1],
                 rotate: [0, 90, 0],
@@ -24,7 +46,7 @@ const About: React.FC = () => {
               }}
             />
             <motion.div
-              className="absolute -bottom-5 -right-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"
+              className="absolute -bottom-4 -right-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
               animate={{
                 scale: [1, 1.1, 1],
                 rotate: [0, 90, 0],
@@ -35,55 +57,94 @@ const About: React.FC = () => {
                 repeat: Infinity,
               }}
             />
-            <img
-              src="./public/photo.jpeg"
-              alt="Profile"
-              className="relative rounded-2xl shadow-2xl w-full object-cover"
-            />
+            <div className="relative">
+              <img
+                src="./public/photo.jpeg"
+                alt="Profile"
+                className="rounded-2xl shadow-2xl w-full object-cover transform hover:scale-105 transition-transform duration-300"
+              />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg"
+              >
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600">2+</div>
+                  <div className="text-gray-600">Years of Experience</div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-8"
           >
-            <motion.h1
-              className="text-4xl font-bold text-gray-900 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              About Me
-            </motion.h1>
-            <motion.div
-              className="space-y-6 text-lg text-gray-700"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <p>
-                Hello! I'm a passionate full-stack developer with a love for
-                creating beautiful and functional web applications. With several
-                years of experience in web development, I specialize in building
-                responsive and user-friendly interfaces.
-              </p>
-              <p>
-                My journey in software development began with a curiosity about
-                how things work on the web. Since then, I've worked on various
-                projects, from small business websites to complex enterprise
-                applications. Currently, I am pursuing my studies at Universitas
-                Komputer Indonesia (UNIKOM) in Bandung, aiming to enhance my
-                skills and knowledge in both front-end and back-end development.
-              </p>
-              <p>
-                My ultimate goal is to become a software engineer who not only
-                builds efficient and scalable applications but also focuses on
-                creating intuitive and visually appealing user experiences
-                (UI/UX). I am constantly learning new technologies, refining my
-                design skills, and staying up-to-date with industry trends to
-                deliver innovative digital solutions.
-              </p>
-            </motion.div>
+            <div>
+              <motion.h1
+                className="text-4xl font-bold text-gray-900 mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                Tentang Saya
+              </motion.h1>
+              <motion.div
+                className="prose prose-lg text-gray-600"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <p>
+                  Halo! Saya seorang pengembang frontend yang bersemangat dalam
+                  menciptakan antarmuka web yang indah, responsif, dan ramah
+                  pengguna. Saat ini, saya sedang menempuh pendidikan di
+                  Universitas Komputer Indonesia (UNIKOM) Bandung, mendalami
+                  dunia pengembangan web modern.
+                </p>
+                <p>
+                  Perjalanan saya di bidang pengembangan web dimulai dari rasa
+                  ingin tahu tentang bagaimana teknologi dapat menciptakan
+                  pengalaman digital yang interaktif. Sejak itu, saya telah
+                  mengerjakan berbagai proyek, mulai dari desain website
+                  sederhana hingga aplikasi berbasis web yang kompleks.
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Timeline */}
+            <div className="mt-12">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                My Journey
+              </h2>
+              <div className="space-y-6">
+                {timeline.map((item, index) => (
+                  <motion.div
+                    key={item.year}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.2 }}
+                    className="flex items-center space-x-4"
+                  >
+                    <div className="bg-white p-3 rounded-xl shadow-md">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <div className="text-sm text-blue-600 font-semibold">
+                        {item.year}
+                      </div>
+                      <div className="text-lg font-medium text-gray-900">
+                        {item.title}
+                      </div>
+                      <div className="text-gray-600">{item.company}</div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
