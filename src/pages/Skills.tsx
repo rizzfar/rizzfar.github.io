@@ -8,8 +8,8 @@ const skillCategories = [
     icon: <Code2 size={24} />,
     skills: [
       { name: "React", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "Next.js", level: 80 },
+      { name: "TypeScript", level: 75 },
+      { name: "Next.js", level: 50 },
       { name: "Tailwind CSS", level: 95 },
       { name: "HTML5/CSS3", level: 90 }
     ],
@@ -19,12 +19,12 @@ const skillCategories = [
     title: "Backend Development",
     icon: <Server size={24} />,
     skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 80 },
-      { name: "Google Cloud", level: 75 },
-      { name: "RESTful APIs", level: 90 },
+      { name: "Node.js", level: 60 },
+      { name: "Express", level: 30 },
+      { name: "Google Cloud", level: 35 },
+      { name: "RESTful APIs", level: 55 },
     ],
-    color: "blue"
+    color: "green"
   },
   {
     title: "UI/UX Design",
@@ -36,7 +36,7 @@ const skillCategories = [
       { name: "Wireframing", level: 85 },
       { name: "Prototyping", level: 80 }
     ],
-    color: "blue"
+    color: "red"
   },
   {
     title: "Other Skills",
@@ -47,7 +47,7 @@ const skillCategories = [
       { name: "Hackerrank", level: 74 },
       { name: "Problem Solving", level: 90 },
     ],
-    color: "blue"
+    color: "purple"
   }
 ];
 
@@ -102,7 +102,6 @@ const Skills: React.FC = () => {
           ))}
         </div>
 
-        {/* Additional Skills Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -1,48 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, Code2, Palette, Server } from 'lucide-react';
-
-const projects = [
-  {
-    title: "Anagram Search",
-    description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL",
-    image: "public/anagram.png",
-    technologies: ["Webpack", "SASS", "WebComponents"],
-    category: "frontend",
-    github: "https://github.com/rizzfar/anagram",
-    live: "https://rizzfar.github.io/anagram/"
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "A beautiful and intuitive task management application with real-time updates, team collaboration, and progress tracking.",
-    image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91",
-    technologies: ["React", "TypeScript", "Tailwind", "Socket.io"],
-    category: "frontend",
-    github: "#",
-    live: "#"
-  },
-  {
-    id: 3,
-    title: "Weather Dashboard",
-    description: "Real-time weather tracking with beautiful visualizations, location-based forecasts, and historical data analysis.",
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b",
-    technologies: ["React", "D3.js", "Weather API", "Chart.js"],
-    category: "frontend",
-    github: "#",
-    live: "#"
-  },
-  {
-    id: 4,
-    title: "API Gateway Service",
-    description: "A robust API gateway service handling authentication, rate limiting, and request routing for microservices.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
-    technologies: ["Node.js", "Express", "Redis", "Docker"],
-    category: "backend",
-    github: "#",
-    live: "#"
-  }
-];
+import { projects } from '../data/content';
 
 const categories = [
   { id: "all", label: "All Projects", icon: <Code2 size={20} /> },

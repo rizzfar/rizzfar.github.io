@@ -5,14 +5,14 @@ import { Book, Briefcase, GraduationCap } from "lucide-react";
 const About: React.FC = () => {
   const timeline = [
     {
-      year: "2023",
-      title: "Frontend Web Developer",
+      year: "2023-2024",
+      title: "Frontend Developer (Remote)",
       company: "Bandung Coders Community",
       icon: <Briefcase className="text-purple-500" size={24} />,
     },
     {
       year: "2023-2027",
-      title: "Computer Science Degree",
+      title: "Computer Science Student",
       company: "Universitas Komputer Indonesia (UNIKOM)",
       icon: <GraduationCap className="text-green-500" size={24} />,
     },
@@ -70,7 +70,7 @@ const About: React.FC = () => {
                 className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">2+</div>
+                  <div className="text-3xl font-bold text-blue-600">1+</div>
                   <div className="text-gray-600">Years of Experience</div>
                 </div>
               </motion.div>
@@ -99,23 +99,21 @@ const About: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <p>
-                  Halo! Saya seorang pengembang frontend yang bersemangat dalam
-                  menciptakan antarmuka web yang indah, responsif, dan ramah
-                  pengguna. Saat ini, saya sedang menempuh pendidikan di
-                  Universitas Komputer Indonesia (UNIKOM) Bandung, mendalami
-                  dunia pengembangan web modern.
+                  Halo! Aku seorang Frontend Developer dengan passion
+                  merancang pengalaman web yang keren dan responsif. Saat ini, saya sedang menempuh pendidikan di Universitas Komputer Indonesia (UNIKOM) Bandung, di mana saya
+                  mendalami dunia pengembangan web modern yang terus berkembang.
                 </p>
                 <p>
-                  Perjalanan saya di bidang pengembangan web dimulai dari rasa
-                  ingin tahu tentang bagaimana teknologi dapat menciptakan
-                  pengalaman digital yang interaktif. Sejak itu, saya telah
-                  mengerjakan berbagai proyek, mulai dari desain website
-                  sederhana hingga aplikasi berbasis web yang kompleks.
+                  Perjalanan saya dalam pengembangan web dimulai dari rasa ingin
+                  tahu yang mendalam tentang bagaimana teknologi dapat
+                  meningkatkan interaksi digital. Selama bertahun-tahun, saya
+                  telah mengerjakan berbagai project, mulai dari merancang desain
+                  website hingga mengembangkan aplikasi web kompleks
+                  yang memberikan pengalaman pengguna yang mulus.
                 </p>
               </motion.div>
             </div>
 
-            {/* Timeline */}
             <div className="mt-12">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">
                 My Journey

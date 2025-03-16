@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Code, Layout, Server, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Code, Layout, Server, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
@@ -10,10 +10,10 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute top-20 left-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
           <div className="absolute top-40 right-0 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
+          <div className="absolute bottom-12 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-32 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pt-44 pt-32 pb-32 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
             >
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
                 <Sparkles size={16} className="mr-2" />
-                Available for freelance work
+                Currently Work Freelance
               </span>
             </motion.div>
 
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-5xl sm:text-7xl font-bold text-gray-900 mb-6"
             >
-              Hi, Saya{' '}
+              Hi, Saya{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Rizky Al Farid
               </span>
@@ -51,9 +51,10 @@ const Home: React.FC = () => {
               className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto"
             >
               <p className="text-gray-600">
-                Seorang Frontend developer yang bersemangat dalam menciptakan pengalaman web yang indah dan fungsional dengan teknologi modern.
+                Frontend Developer yang bersemangat dalam merancang pengalaman
+                web yang estetis, responsif, dan intuitif, didukung oleh
+                teknologi modern.
               </p>
-
             </motion.p>
 
             <motion.div
@@ -67,7 +68,10 @@ const Home: React.FC = () => {
                 className="group inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               >
                 View My Work
-                <ArrowRight className="ml-2 transform group-hover:translate-x-1 transition-transform" size={20} />
+                <ArrowRight
+                  className="ml-2 transform group-hover:translate-x-1 transition-transform"
+                  size={20}
+                />
               </Link>
               <Link
                 to="/contact"
@@ -97,8 +101,8 @@ const Home: React.FC = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4">Frontend Development</h3>
             <p className="text-gray-600">
-              Membangun antarmuka pengguna yang responsif dan intuitif dengan framework modern serta praktik terbaik.
-
+              Membangun antarmuka pengguna yang responsif dan intuitif dengan
+              framework modern serta praktik terbaik.
             </p>
           </motion.div>
 
@@ -112,9 +116,9 @@ const Home: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4">Backend Development</h3>
             <p className="text-gray-600">
               <p className="text-gray-600">
-                Membangun aplikasi server-side yang skalabel dan aman dengan arsitektur yang kokoh.
+                Membangun aplikasi server-side yang skalabel dan aman dengan
+                arsitektur yang kokoh.
               </p>
-
             </p>
           </motion.div>
 
@@ -127,10 +131,9 @@ const Home: React.FC = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4">UI/UX Design</h3>
             <p className="text-gray-600">
-              Mendesain antarmuka yang intuitif, menarik, dan mudah digunakan dengan
-              mengikuti prinsip desain yang baik serta standar industri.
+              Mendesain antarmuka yang intuitif, menarik, dan mudah digunakan
+              dengan mengikuti prinsip desain yang baik serta standar industri.
             </p>
-
           </motion.div>
         </div>
       </motion.div>

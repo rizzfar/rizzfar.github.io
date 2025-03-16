@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X, Github, Linkedin, FileText, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { navItems } from '../data/content';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,14 +16,6 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navItems = [
-    { path: '/', label: 'Beranda' },
-    { path: '/about', label: 'Tentang Saya' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/skills', label: 'Skills' },
-    { path: '/contact', label: 'Kontak' },
-  ];
 
   return (
     <motion.nav

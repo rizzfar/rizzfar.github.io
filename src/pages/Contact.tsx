@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
                   <Phone className="text-green-600" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900">Phone</h3>
+                  <h3 className="font-medium text-gray-900">Telepon</h3>
                   <p className="text-gray-600">+62 (878) 8466-7371</p>
                 </div>
               </div>
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
                   <MapPin className="text-purple-600" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900">Location</h3>
+                  <h3 className="font-medium text-gray-900">Lokasi</h3>
                   <p className="text-gray-600">Cianjur City, West Java</p>
                 </div>
               </div>
@@ -112,14 +112,14 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
+                  Nama
                 </label>
                 <input
                   type="text"
                   id="name"
                   {...register("name", { required: "Name is required" })}
                   className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Your name"
+                  placeholder="Nama kamu"
                 />
                 {errors.name && (
                   <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
                     }
                   })}
                   className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="your@email.com"
+                  placeholder="kamu@email.com"
                 />
                 {errors.email && (
                   <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -150,14 +150,14 @@ const Contact: React.FC = () => {
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                  Subject
+                  Subjek
                 </label>
                 <input
                   type="text"
                   id="subject"
                   {...register("subject", { required: "Subject is required" })}
                   className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="What's this about?"
+                  placeholder="Masukkan Subjek"
                 />
                 {errors.subject && (
                   <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
@@ -166,14 +166,14 @@ const Contact: React.FC = () => {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
+                  Pesan
                 </label>
                 <textarea
                   id="message"
                   {...register("message", { required: "Message is required" })}
                   rows={4}
                   className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Your message..."
+                  placeholder="Pesan Kamu..."
                 />
                 {errors.message && (
                   <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
@@ -187,7 +187,7 @@ const Contact: React.FC = () => {
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Send size={20} />
-                <span>Send Message</span>
+                <span>Kirim Pesan</span>
               </motion.button>
             </form>
           </motion.div>
