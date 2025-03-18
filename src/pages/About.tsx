@@ -1,153 +1,98 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Book, Briefcase, GraduationCap } from "lucide-react";
+import { motion } from 'framer-motion';
+import { timelineItems } from '../data/content';
 
-const About: React.FC = () => {
-  const timeline = [
-    {
-      year: "2023-2024",
-      title: "Frontend Developer (Remote)",
-      company: "Bandung Coders Community",
-      icon: <Briefcase className="text-purple-500" size={24} />,
-    },
-    {
-      year: "2023-2027",
-      title: "Computer Science Student",
-      company: "Universitas Komputer Indonesia (UNIKOM)",
-      icon: <GraduationCap className="text-green-500" size={24} />,
-    },
-    {
-      year: "2020",
-      title: "First Line of Code",
-      company: "Self-taught Journey",
-      icon: <Book className="text-red-500" size={24} />,
-    },
-  ];
 
+export default function About() {
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
-      <div className="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Tentang Saya
+          </h1>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Seorang <b>Frontend Developer</b> yang bersemangat dengan fokus pada menciptakan
+            pengalaman pengguna yang luar biasa melalui desain yang bersih dan kode yang efisien.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative"
+            transition={{ delay: 0.2 }}
+            className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg"
           >
-            <motion.div
-              className="absolute -top-4 -left-4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
-              animate={{
-                scale: [1, 1.1, 1],
-                rotate: [0, 90, 0],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-              }}
-            />
-            <motion.div
-              className="absolute -bottom-4 -right-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
-              animate={{
-                scale: [1, 1.1, 1],
-                rotate: [0, 90, 0],
-              }}
-              transition={{
-                duration: 8,
-                delay: 2,
-                repeat: Infinity,
-              }}
-            />
-            <div className="relative">
-              <img
-                src="./public/photo.jpeg"
-                alt="Profile"
-                className="rounded-2xl shadow-2xl w-full object-cover transform hover:scale-105 transition-transform duration-300"
-              />
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg"
-              >
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">1+</div>
-                  <div className="text-gray-600">Years of Experience</div>
-                </div>
-              </motion.div>
-            </div>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              Profil
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300">
+              Saya adalah seorang Frontend Developer dan UI/UX Designer dengan pengalaman
+              dalam mengembangkan aplikasi web modern. Saya memiliki passion dalam
+              menciptakan antarmuka yang intuitif dan responsif.
+            </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-8"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg"
           >
-            <div>
-              <motion.h1
-                className="text-4xl font-bold text-gray-900 mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                Tentang Saya
-              </motion.h1>
-              <motion.div
-                className="prose prose-lg text-gray-600"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <p>
-                  Halo! Aku seorang Frontend Developer dengan passion
-                  merancang pengalaman web yang keren dan responsif. Saat ini, saya sedang menempuh pendidikan di Universitas Komputer Indonesia (UNIKOM) Bandung, di mana saya
-                  mendalami dunia pengembangan web modern yang terus berkembang.
-                </p>
-                <p>
-                  Perjalanan saya dalam pengembangan web dimulai dari rasa ingin
-                  tahu yang mendalam tentang bagaimana teknologi dapat
-                  meningkatkan interaksi digital. Selama bertahun-tahun, saya
-                  telah mengerjakan berbagai project, mulai dari merancang desain
-                  website hingga mengembangkan aplikasi web kompleks
-                  yang memberikan pengalaman pengguna yang mulus.
-                </p>
-              </motion.div>
-            </div>
-
-            <div className="mt-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                My Journey
-              </h2>
-              <div className="space-y-6">
-                {timeline.map((item, index) => (
-                  <motion.div
-                    key={item.year}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.2 }}
-                    className="flex items-center space-x-4"
-                  >
-                    <div className="bg-white p-3 rounded-xl shadow-md">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <div className="text-sm text-blue-600 font-semibold">
-                        {item.year}
-                      </div>
-                      <div className="text-lg font-medium text-gray-900">
-                        {item.title}
-                      </div>
-                      <div className="text-gray-600">{item.company}</div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              Keahlian
+            </h2>
+            <ul className="text-gray-600 dark:text-gray-300 space-y-2">
+              <li>• Frontend Development (React, Next.js)</li>
+              <li>• UI/UX Design</li>
+              <li>• Responsive Web Design</li>
+              <li>• Modern JavaScript (ES6+)</li>
+            </ul>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="relative"
+        >
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">
+            Pendidikan & Pengalaman
+          </h2>
+          <div className="space-y-8">
+            {timelineItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 + index * 0.1 }}
+                className="relative flex items-start"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400">
+                  <item.icon size={24} />
+                </div>
+                <div className="ml-6">
+                  <div className="font-semibold text-indigo-600 dark:text-indigo-400">
+                    {item.year}
+                  </div>
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">{item.institution}</p>
+                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );
-};
-
-export default About;
+}
