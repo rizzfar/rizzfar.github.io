@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import { projects } from '../data/content';
 
 export default function Projects() {
+  const [filter, setFilter] = useState('all');
+
+  const filteredProjects =
+    filter === 'all'
+      ? projects
+      : projects.filter((project) => project.category === filter);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -14,14 +22,30 @@ export default function Projects() {
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Proyek Terbaru
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10">
             Berikut adalah beberapa proyek terbaik yang telah saya kerjakan,
             menunjukkan kemampuan teknis dan kreativitas saya dalam pengembangan web.
           </p>
+
+          <div className="flex justify-center gap-4 flex-wrap mb-10">
+            {['all', 'frontend', 'backend', 'UI/UX'].map((category) => (
+              <button
+                key={category}
+                onClick={() => setFilter(category)}
+                className={`px-4 py-2 rounded-full border transition hover:scale-105 ${
+                  filter === category
+                    ? 'bg-indigo-600 text-white border-indigo-600'
+                    : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-white border-gray-300 dark:border-gray-600'
+                }`}
+              >
+                {category === 'all' ? 'Semua' : category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+            ))}
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}

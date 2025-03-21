@@ -42,23 +42,30 @@ const certificates = [
     credentialUrl: '#',
   },
   {
+    title: 'React Developer level Intermediate',
+    issuer: 'IDCamp 2024 by Indosaat Oooredo Hutchison',
+    date: 'Maret 2025',
+    image: 'public/certificate/certicicate-idcamp(react).jpg',
+    credentialUrl: '#',
+  },
+  {
     title: 'Frontend Developer (React)',
-    issuer: 'Udemy',
-    date: 'August 2023',
+    issuer: 'HackerRank',
+    date: 'Februari 2025',
     image: 'public/certificate/certificate-hackerrank.jpg',
     credentialUrl: '#',
   },
   {
     title: 'Javascript Intermediate (Gold)',
     issuer: 'Skilvul',
-    date: 'August 2023',
+    date: 'July 2024',
     image: 'public/certificate/certificate-gold.jpg',
     credentialUrl: '#',
   },
   {
     title: 'UI/UX Design With Figma',
     issuer: 'Udemy',
-    date: 'October 2023',
+    date: 'Oktober 2024',
     image: 'public/certificate/certificate-figma.jpg',
     credentialUrl: '#',
   },
@@ -67,6 +74,20 @@ const certificates = [
     issuer: 'Jabar Digital Academy',
     date: 'March 2023',
     image: 'public/certificate/certificate-pemweb.jpg',
+    credentialUrl: '#',
+  },
+  {
+    title: 'Belajar Cepat Vue.JS',
+    issuer: 'Codepolitan',
+    date: 'Juni 2023',
+    image: 'public/certificate/certificate-vue.jpg',
+    credentialUrl: '#',
+  },
+  {
+    title: 'Jquery Basic',
+    issuer: 'Codepolitan',
+    date: 'April 2023',
+    image: 'public/certificate/certificate-jquery.jpg',
     credentialUrl: '#',
   },
   {
@@ -87,6 +108,7 @@ const projects = [
     tags: ["React", "TailwindCSS", "Typescript"],
     demoUrl: "rizzfar.github.io",
     githubUrl: "http://github.com/rizzfar/rizzfar.github.io",
+    category : 'frontend',
   },
   {
     title: "Anagram Search",
@@ -96,6 +118,7 @@ const projects = [
     tags: ["Javascript", "SCSS", "Web Component"],
     demoUrl: "https://rizzfar.github.io/anagram/",
     githubUrl: "https://github.com/rizzfar/anagram",
+    category : 'frontend',
   },
   {
     title: "Bookshelf API",
@@ -105,6 +128,7 @@ const projects = [
     tags: ["Postman", "NodeJS", "Google Cloud"],
     demoUrl: "#",
     githubUrl: "#",
+    category : 'backend',
   },
   {
     title: "Suwit Jawa Games V.2",
@@ -114,6 +138,17 @@ const projects = [
     tags: ["HTML", "CSS", "Javascript"],
     demoUrl: "#",
     githubUrl: "#",
+    category : 'frontend',
+  },
+  {
+    title: "Suwit Jawa Games V.2",
+    description:
+      "Permainan tradisional Suwit Jawa versi 2 dengan tampilan responsif dan logika permainan yang interaktif.",
+    image: "public/image/suwitjawa.png",
+    tags: ["HTML", "CSS", "Javascript"],
+    demoUrl: "#",
+    githubUrl: "#",
+    category : 'UI/UX',
   },
 ];
 
