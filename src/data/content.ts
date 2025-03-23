@@ -121,6 +121,16 @@ const projects = [
     category : 'frontend',
   },
   {
+    title: "Bandung City Web Blog",
+    description:
+      "Anagram Search adalah aplikasi web untuk mencari anagram dengan cepat dan efisien menggunakan algoritma Stenhaus Johnson Rotter.",
+    image: "public/image/bandungcity.png",
+    tags: ["ReactJS"],
+    demoUrl: "https://rizzfar.github.io/bandungcity/",
+    githubUrl: "https://github.com/rizzfar/bandungcity",
+    category : 'frontend',
+  },
+  {
     title: "Bookshelf API",
     description:
       "Bookshelf API adalah backend Node.js untuk mengelola koleksi buku, mendukung CRUD, cepat, dan scalable, siap untuk integrasi.",
