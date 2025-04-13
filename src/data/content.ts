@@ -111,6 +111,26 @@ const projects = [
     category : 'frontend',
   },
   {
+    title: "Papua Website",
+    description:
+      "tentang solidaritas untuk papua yang terbully.",
+    image: "public/image/papua.png",
+    tags: ["HTML", "CSS", "Javascript", "Webpack"],
+    demoUrl: "#",
+    githubUrl: "#",
+    category : 'frontend',
+  },
+  {
+    title: "News Web Page",
+    description:
+      "web berita sederhana.",
+    image: "public/image/news.png",
+    tags: ["HTML", "CSS", "Javascript"],
+    demoUrl: "#",
+    githubUrl: "#",
+    category : 'frontend',
+  },
+  {
     title: "Anagram Search",
     description:
       "Anagram Search adalah aplikasi web untuk mencari anagram dengan cepat dan efisien menggunakan algoritma Stenhaus Johnson Rotter.",
@@ -141,10 +161,10 @@ const projects = [
     category : 'backend',
   },
   {
-    title: "Suwit Jawa Games V.2",
+    title: "Todolist App",
     description:
       "Permainan tradisional Suwit Jawa versi 2 dengan tampilan responsif dan logika permainan yang interaktif.",
-    image: "public/image/suwitjawa.png",
+    image: "public/image/todolist.png",
     tags: ["HTML", "CSS", "Javascript"],
     demoUrl: "#",
     githubUrl: "#",
@@ -158,7 +178,7 @@ const projects = [
     tags: ["HTML", "CSS", "Javascript"],
     demoUrl: "#",
     githubUrl: "#",
-    category : 'UI/UX',
+    category : 'frontend',
   },
 ];
 
