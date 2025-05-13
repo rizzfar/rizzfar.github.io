@@ -47,6 +47,7 @@ export default function Home() {
               </Link>
             </div>
 
+
             <div className="mt-12 flex items-center gap-6">
               <div className="flex -space-x-4">
                 <img
@@ -96,10 +97,11 @@ export default function Home() {
                 className="relative"
               >
                 <img
-                  src="public/image/photo.jpeg"
+                  src="public/image/ghibli.png"
                   alt="Profile"
-                  className="relative rounded-2xl shadow-2xl"
+                  className="w-[500px] h-[500px] rounded-3xl shadow-2xl object-cover object-top"
                 />
+
               </motion.div>
             </div>
           </motion.div>
@@ -112,37 +114,37 @@ export default function Home() {
           className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
         >
           <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-  <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 font-display">
-    Continuous
-  </h3>
-  <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
-    Learning & Improvement
-  </p>
-</div>
-<div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-  <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 font-display">
-    15+ Proyek
-  </h3>
-  <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
-    UI Concept & Side Project
-  </p>
-</div>
-<div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-  <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 font-display">
-    Fast
-  </h3>
-  <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
-    Adaptation & Problem Solving
-  </p>
-</div>
-<div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-  <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 font-display">
-    Passionate
-  </h3>
-  <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
-     UI/UX & Frontend Development
-  </p>
-</div>
+            <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 font-display">
+              Continuous
+            </h3>
+            <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
+              Learning & Improvement
+            </p>
+          </div>
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+            <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 font-display">
+              15+ Proyek
+            </h3>
+            <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
+              UI Concept & Side Project
+            </p>
+          </div>
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+            <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 font-display">
+              Fast
+            </h3>
+            <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
+              Adaptation & Problem Solving
+            </p>
+          </div>
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+            <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 font-display">
+              Passionate
+            </h3>
+            <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
+              UI/UX & Frontend Development
+            </p>
+          </div>
 
         </motion.div>
       </div>
