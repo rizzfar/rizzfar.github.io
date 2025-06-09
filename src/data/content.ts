@@ -101,9 +101,9 @@ const certificates = [
 
 const projects = [
   {
-    title: "Portfolio Website",
+    title: "Personal Portfolio Website",
     description:
-      "Website portofolio interaktif dengan React & TailwindCSS.",
+      "Website portofolio interaktif untuk memperkuat personal branding dan menampilkan keahlian modern dalam React & TailwindCSS.",
     image: "public/image/portoflio.png",
     tags: ["React", "TailwindCSS", "Typescript"],
     demoUrl: "https://rizzfar.github.io",
@@ -111,9 +111,27 @@ const projects = [
     category: "frontend",
   },
   {
-    title: "Papua Website",
+    title: "Portfolio UI Design",
     description:
-      "Website kampanye solidaritas untuk Papua.",
+      "Desain UI portofolio profesional untuk membangun citra digital sebagai Frontend Developer & UI/UX Designer.",
+    image: "public/image/portofolioui.png",
+    tags: ["Figma"],
+    demoUrl: "https://www.figma.com/design/zdgpKtqOKbBuzxeCAEOSyv/Mockup-Anagram?node-id=0-1&p=f&t=V9xZDhyRYlyAeFRD-0",
+    category: "UI/UX",
+  },
+  {
+    title: "Anagram App UI Design",
+    description:
+      "Desain antarmuka aplikasi anagram dengan fokus pada kesederhanaan dan kemudahan eksplorasi.",
+    image: "public/image/anagramui.png",
+    tags: ["Figma"],
+    demoUrl: "https://www.figma.com/design/zdgpKtqOKbBuzxeCAEOSyv/Mockup-Anagram?node-id=0-1&p=f&t=V9xZDhyRYlyAeFRD-0",
+    category: "UI/UX",
+  },
+  {
+    title: "Social Awareness Website",
+    description:
+      "Website kampanye sosial yang menyuarakan kepedulian terhadap isu-isu kemanusiaan di Papua.",
     image: "public/image/papua.png",
     tags: ["HTML", "CSS", "Javascript", "Webpack"],
     demoUrl: "#",
@@ -121,9 +139,9 @@ const projects = [
     category: "frontend",
   },
   {
-    title: "News Web Page",
+    title: "News Landing Page",
     description:
-      "Halaman web berita sederhana.",
+      "Halaman berita ringan dengan tampilan modern dan user-friendly.",
     image: "public/image/news.png",
     tags: ["HTML", "CSS", "Javascript"],
     demoUrl: "#",
@@ -131,9 +149,9 @@ const projects = [
     category: "frontend",
   },
   {
-    title: "Anagram Search",
+    title: "Anagram Finder Web App",
     description:
-      "Aplikasi pencari anagram cepat berbasis algoritma.",
+      "Aplikasi pencari anagram cepat berbasis algoritma dan antarmuka minimalis.",
     image: "public/image/anagram.png",
     tags: ["Javascript", "SCSS", "Web Component"],
     demoUrl: "https://rizzfar.github.io/anagram/",
@@ -141,9 +159,9 @@ const projects = [
     category: "frontend",
   },
   {
-    title: "Bandung City Web Blog",
+    title: "City Blog Web App",
     description:
-      "Web blog interaktif tentang kota Bandung.",
+      "Web blog interaktif yang mengangkat budaya dan pesona kota Bandung.",
     image: "public/image/bandungcity.png",
     tags: ["ReactJS"],
     demoUrl: "https://rizzfar.github.io/bandungcity/",
@@ -151,9 +169,9 @@ const projects = [
     category: "frontend",
   },
   {
-    title: "Bookshelf API",
+    title: "Bookshelf API Service",
     description:
-      "RESTful API untuk pengelolaan koleksi buku.",
+      "RESTful API untuk manajemen koleksi buku, lengkap dengan dokumentasi dan deployment-ready.",
     image: "public/image/bookshelf.png",
     tags: ["Postman", "NodeJS", "Google Cloud"],
     demoUrl: "#",
@@ -161,9 +179,9 @@ const projects = [
     category: "backend",
   },
   {
-    title: "Todolist App",
+    title: "Todolist Web App",
     description:
-      "Aplikasi pencatat tugas harian yang simpel.",
+      "Aplikasi to-do list sederhana untuk mencatat dan menyelesaikan tugas harian.",
     image: "public/image/todolist.png",
     tags: ["HTML", "CSS", "Javascript"],
     demoUrl: "#",
@@ -171,9 +189,9 @@ const projects = [
     category: "frontend",
   },
   {
-    title: "Suwit Jawa Games V.2",
+    title: "Suwit Jawa Game",
     description:
-      "Game Suwit Jawa dengan UI responsif & interaktif.",
+      "Game suit versi lokal dengan tampilan responsif dan pengalaman interaktif.",
     image: "public/image/suwitjawa.png",
     tags: ["HTML", "CSS", "Javascript"],
     demoUrl: "#",
@@ -181,5 +199,6 @@ const projects = [
     category: "frontend",
   },
 ];
+
 
 export { navItems, timelineItems, certificates, projects };
